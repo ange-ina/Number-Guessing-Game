@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Game</title>
+    <!-- <style>
+        h2,h3{
+            text-align: center;
+        }
+        div{
+        
+            display: flex;
+            justify-content: center;
+            align-items: space-between;
+            margin-right: 5px;
+        }
+        .Num{
+            width: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 50px auto;
+        }
+        input[type=radio]{
+            display: nones;
+        }
+        input[type=radio]:checked ~ .remove-check{
+            display: none;
+        }
+        input[type=radio]:checked ~ #moreRound{
+            display:block;
+        }
+        #moreRound{
+            display: none;
+        }
+       
+       
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Number Guessing Game 1-100</h2>
+        <form action="">
+            <h3>In how many rounds you think you can guess the number?</h3>
+            <div>
+                <input type="radio" name="round" id="four">
+                <label for="">4</label>
+                <input type="radio" name="round" id="five">
+                <label for="">5</label>
+                <input type="radio" name="round" id="six">
+                <label for="">6</label>
+                <input type="radio" name="round" id="custom" checked>
+                <label for="">custom</label>
+                <input type="number" name="" id="moreRound">
+               
+            </div>
+                
+                <!-- <input type="number" name="" id="customNumber"> -->
+           <!-- <div class="Num">
+            <input type="number" name="" id="userNumber">
+            <input type="button" value="guess" id="guess" onclick="guessNumber()">
+           </div>
+            
+        </form>
+        <div id="result"></div>
+    </section> --> 
+
+
+
+    <!-- //Anass version// -->
+    <h1>Number Guessing game 1-100</h1>
+    <article>
+        <h2>How many rounds you think you can guess the number?</h2>
+        <div id="container">
+            <form action="">
+                <input type="radio" name="rounds" onchange="getRound()" id="four" checked>
+                <label for="four">4</label>
+                <input type="radio" name="rounds" onchange="getRound()" id="five">
+                <label for="five">5</label>
+                <div>
+                    <input type="radio" name="rounds" onchange="getRound()" id="six">
+                    <label for="six">6</label>
+                    <input type="radio" name="rounds" onchange="getRound()" id="custom">
+                    <label for="custom">Custom</label>
+                    <input type="number" name="" id="custom-input" onchange="getRound()">
+                </div>
+            </form>
+        </div>
+        <div id="round-container">
+            <span id="round">0</span>/<span id="round-total">5</span>
+        </div>
+    </article>
+    <article>
+        <div><input type="number" name="" id="number-user"></div>
+        <div><input type="button" value="guess" onclick="main()" id="btn"> </div>
+    </article>
+    <div id="result"></div>
+    <script src="main.js"></script>
+</body>
+</html>
